@@ -48,7 +48,30 @@ const HomeHeader = styled.header`
 
 `;
 
+const HomeContainer = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5vw;
+    
+    section{
+        width: 50vw;
+    }
+    aside{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 10vw;
+        width: 30vw;
+        border: 1px solid ${props => props.theme.colors.text_featured};
+    }
+`;
 export {
     Container,
-    HomeHeader
+    HomeHeader,
+    HomeContainer
 }
