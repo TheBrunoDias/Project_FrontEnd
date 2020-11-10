@@ -1,11 +1,13 @@
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext} from 'react';
 import light from '../styles/themes/light';
+
+import usePersistedSate from './usePersistedState';
 
 const ThemeContext = createContext();
 
 export default function GlobalContextProvider({children}){
 
-    const [theme,setTheme] = useState(light);
+    const [theme,setTheme] = usePersistedSate('theme', light);
     return(
         <ThemeContext.Provider
             value={{

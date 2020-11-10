@@ -1,8 +1,8 @@
 //STYLED-COMPONENTS 
-import { Container, HomeHeader, HomeContainer } from "./style";
+import { Container, HomeHeader, HomeContainer,SectionTitle, AsideArea } from "./style";
 
 //ICONS
-import { FiSmile } from 'react-icons/fi';
+import { FiSmile, FiSearch } from 'react-icons/fi';
 import Post from "../../components/post";
 
 //IMAGES
@@ -18,7 +18,7 @@ export default function Home() {
 
             <HomeContainer>
                 <section>
-                    <h3> Postagens Mais recentes: </h3>
+                    <SectionTitle> Postagens Mais recentes: </SectionTitle>
                     <Post 
                         img={imgBlog} 
                         title="Blog Title" 
@@ -28,9 +28,14 @@ export default function Home() {
                     />
                 </section>
 
-                <aside>
-                    <h3>Procurar</h3>
-                </aside>
+                <AsideArea>
+                    <SectionTitle>Procurar</SectionTitle>
+                    <form action="/" method="get">
+                        <input type="text" name="search" id="search"  placeholder="O que está procurando?"/>
+                        <button type="submit"><FiSearch/></button>
+                    </form>
+
+                </AsideArea>
             </HomeContainer>
         </Container>
     );

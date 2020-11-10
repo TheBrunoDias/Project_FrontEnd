@@ -12,10 +12,11 @@ import { useTheme } from '../../contexts/global';
 import { Container, NavLink, Divider, SocialContainer, LeftContainer, RightContainer, ListItem} from './style';
 
 //ICONS
-import { FiSun, FiFacebook, FiInstagram, FiGithub} from 'react-icons/fi';
+import { FiSun, FiFacebook, FiInstagram, FiGithub, FiPhone} from 'react-icons/fi';
 import { BsMoon } from 'react-icons/bs';
 import {RiTeamLine} from 'react-icons/ri';
-import {HiOutlinePuzzle} from 'react-icons/hi'
+import {HiOutlinePuzzle} from 'react-icons/hi';
+import {CgGames} from 'react-icons/cg';
 
 //THEMES
 import dark from '../../styles/themes/dark';
@@ -38,9 +39,9 @@ export default function Header() {
             <LeftContainer>
                 <NavLink to="/"><h1>Uniamericon</h1></NavLink>
                 <SocialContainer>
-                    <a href="/" target="_blank"><FiFacebook size={20} color={colors.text} /></a>
-                    <a href="/" target="_blank"><FiInstagram size={20} color={colors.text} /></a>
-                    <a href="/" target="_blank"> <FiGithub size={20} color={colors.text} /></a>
+                    <a href="/" target="_blank"><FiFacebook size={20} color={colors.text_featured} /></a>
+                    <a href="/" target="_blank"><FiInstagram size={20} color={colors.text_featured} /></a>
+                    <a href="/" target="_blank"> <FiGithub size={20} color={colors.text_featured} /></a>
                 </SocialContainer>
             </LeftContainer>
 
@@ -48,8 +49,12 @@ export default function Header() {
 
                 <DropDown title="Saiba Mais">
                         <ListItem><NavLink to="/"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
-                        <hr width="100%"/>
+                        <hr width="100%" style={{backgroundColor: `${colors.text_featured}`}}/>
                         <ListItem><NavLink to="/"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
+                        <hr width="100%"/>
+                        <ListItem><NavLink to="/"><CgGames/> Jogos</NavLink></ListItem>
+                        <hr width="100%"/>
+                        <ListItem><NavLink to="/"><FiPhone/> Fale Conosco</NavLink></ListItem>
                 </DropDown>
 
                 <Switch
@@ -65,7 +70,7 @@ export default function Header() {
                     onHandleColor={colors.text}
                     offHandleColor={colors.text}
                     offColor={colors.background}
-                    onColor={colors.featured}
+                    onColor={colors.background}
                 />
                 <Divider />
                <NavLink to="/">Entrar</NavLink>

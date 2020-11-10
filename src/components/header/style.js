@@ -45,11 +45,12 @@ const SocialContainer = styled.div`
     a{
         transition: 0.5s;
         padding: 10px;
-        border-radius: 50px;
+        
     }
 
     a:hover{
-        background-color: ${props => props.theme.colors.background};
+        background-color: ${props => props.theme.colors.text};
+        border-radius: 50px;
     }
 `;
 

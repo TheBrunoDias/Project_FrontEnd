@@ -15,6 +15,7 @@ export default createGlobalStyle`
         font-family: 'Roboto Condensed', sans-serif;
         height: 100vh;
         overflow-x: hidden;
+        transition: color  0.5s, background 0.5s;
     }
 
     a{

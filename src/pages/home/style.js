@@ -1,50 +1,49 @@
-import styled,  {keyframes} from 'styled-components';
+import styled from 'styled-components';
+
+//ANIMATIONS
+import HeaderBackground from '../../styles/keyframes/HeaderBackground';
+import {TitleAfterAnimation, TitleAnimation, SubTitleAnimation} from '../../styles/keyframes/HeaderTitle';
 
 const Container = styled.div`
     width: 100vw;
 `;
 
-const H1Animation = keyframes`
-    from{
-        transform: scale(0,0);
-        
-    }
-    to{
-        transform: scale(1,1);
-    }
-`;
-
-const PAnimation = keyframes`
-    from{
-        opacity: 0;
-        transform: translateY(-300%);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
 
 const HomeHeader = styled.header`
     width:100vw;
-    background: linear-gradient(45deg, ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.background});
+    background: linear-gradient(-45deg, ${props => props.theme.colors.featured}, ${props => props.theme.colors.background}) no-repeat;
+    background-size: 300% 300%;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    animation: ${HeaderBackground} 2s linear infinite alternate;
 
     h1{
+        position: relative;
         font-size: 5vw;
+        
+        color: transparent;
         margin-bottom: 2vh;
-        /* animation: ${H1Animation} 1s normal; */
+        overflow: hidden;
+        animation: ${TitleAnimation} 0.5s linear  2s forwards;
+    }
+    h1::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.background}) no-repeat;
+            animation: ${TitleAfterAnimation} 2s ease-in-out 1 1s;
     }
 
     p{
-        animation: ${PAnimation} 1s normal;
-
+        font-size: 20px;
+        animation: ${SubTitleAnimation} 2s cubic-bezier(0.4,-0.98, 0.04, 1.56) forwards;
     }
+    
 
 `;
 
@@ -59,19 +58,52 @@ const HomeContainer = styled.div`
     section{
         width: 50vw;
     }
-    aside{
-        position: fixed;
+`;
+
+const AsideArea = styled.aside`
+        color: ${props => props.theme.colors.text_featured};
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         right: 10vw;
         width: 30vw;
         border: 1px solid ${props => props.theme.colors.text_featured};
-    }
+
+        form{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 0;
+
+            input{
+                width: 80%;
+                height: 4vh;
+                padding: 10px;
+                font-style: italic;
+            }
+            button{
+                width: 18%
+            }
+        }
+
+
 `;
+
+const SectionTitle = styled.h3`
+            width: 100%;
+            color: ${props => props.theme.colors.text_featured};
+            background-color: ${props => props.theme.colors.background_featured};
+            padding: 10px;
+            border: 1px solid ${props => props.theme.colors.text_featured};
+`;
+
+
 export {
     Container,
     HomeHeader,
-    HomeContainer
+    HomeContainer,
+    SectionTitle,
+    AsideArea
 }
