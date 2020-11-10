@@ -49,7 +49,7 @@ const SocialContainer = styled.div`
     }
 
     a:hover{
-        background-color: ${props => props.theme.colors.text};
+        background-color: ${props => props.theme.colors.featured};
         border-radius: 50px;
     }
 `;

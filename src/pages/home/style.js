@@ -76,15 +76,19 @@ const AsideArea = styled.aside`
             justify-content: space-between;
             width: 100%;
             padding: 10px 0;
+            margin: 2vh 0;
 
             input{
                 width: 80%;
                 height: 4vh;
                 padding: 10px;
                 font-style: italic;
+                border: 1px solid ${props => props.theme.colors.text_featured};
+                
             }
             button{
-                width: 18%
+                width: 18%;
+                border: 1px solid ${props => props.theme.colors.text_featured};
             }
         }
 

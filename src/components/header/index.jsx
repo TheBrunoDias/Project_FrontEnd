@@ -49,7 +49,7 @@ export default function Header() {
 
                 <DropDown title="Saiba Mais">
                         <ListItem><NavLink to="/"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
-                        <hr width="100%" style={{backgroundColor: `${colors.text_featured}`}}/>
+                        <hr width="100%"/>
                         <ListItem><NavLink to="/"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
                         <hr width="100%"/>
                         <ListItem><NavLink to="/"><CgGames/> Jogos</NavLink></ListItem>

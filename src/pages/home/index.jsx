@@ -34,7 +34,6 @@ export default function Home() {
                         <input type="text" name="search" id="search"  placeholder="O que está procurando?"/>
                         <button type="submit"><FiSearch/></button>
                     </form>
-
                 </AsideArea>
             </HomeContainer>
         </Container>
