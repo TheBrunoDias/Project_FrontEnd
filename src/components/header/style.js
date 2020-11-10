@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
+    border-bottom: 2px solid ${props => props.theme.colors.text};
     height: 60px;
     background:  ${props => props.theme.colors.background_featured};
     color:  ${props => props.theme.colors.text};

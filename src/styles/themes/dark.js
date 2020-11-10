@@ -2,12 +2,12 @@
 const dark = {
     title: 'dark',
     colors: {
-        text: '#ffffff',
-        featured: '#007EA7 ',
-        text_featured: '#00d9c0',
+        text: '#fffffc',
+        featured: '#000000',
+        text_featured: '#32c5d2',
 
-        background: '#00171F',
-        background_featured: '#00171F',
+        background: '#000000',
+        background_featured: '#363636',
 
     }
 }

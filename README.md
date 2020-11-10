@@ -2,7 +2,7 @@
  - npm install ou yarn para instalar todas as dependências do projeto
 
 ### Telas
- - LandingPage
+ - [x] LandingPage
  - Sobre Nós
  - Sobre TEA 
  - Entre em contato*
@@ -11,7 +11,7 @@
     - Tela de Nova Postagem
     - Tela de Atualização de dados do usuário
  - Blog
-    - Single Post Blog
+    - [x] Single Post Blog
     - Search Post Page
 
 (* --> não prioridade)
@@ -26,10 +26,13 @@
  - Rich Text Editor
 
  **Adicionais**
- - Dark Mode - Feito
+ - [x] Dark Mode
+ - [x] Salvar theme no LocalStorage
  - Animações
  - Envio de email para contato
 
  ### Componentes:
  - [x] Header
  - [x] DropDown
+ - [x] Post
+ - [x] Aside

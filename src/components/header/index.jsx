@@ -1,5 +1,7 @@
 //REACT HOOKS
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
+
+import {useLocation} from 'react-router-dom';
 
 //LIBRIRIES
 import Switch from 'react-switch'
@@ -33,6 +35,17 @@ export default function Header() {
     //CONTEXTS
     const { colors } = useContext(ThemeContext);
     const { theme, setTheme } = useTheme();
+
+    //RETURN THE CURRENT URL
+    const {pathname} = useLocation();
+
+    //SCROLL TO THE TOP WHEN URL CHANGES
+    useEffect(() => {
+        window.scrollBy({
+            top: -window.innerHeight * 2,
+            behavior: "smooth",
+        });
+    },[pathname])
 
     return (
         <Container>

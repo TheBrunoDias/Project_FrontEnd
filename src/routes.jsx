@@ -5,27 +5,34 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
 
-
 //COMPONENTS
 import Header from './components/header';
+
+//PAGES
 import Home from './pages/home';
+import Blog from './pages/blog';
 
 //CONTEXT
-import {useTheme} from './contexts/global' 
+import { useTheme } from './contexts/global'
+import Footer from './components/footer';
 
 export default function Routes() {
 
-    const {theme} = useTheme();
+    const { theme } = useTheme();
 
     return (
-            <ThemeProvider theme={theme}>
-                <GlobalStyles />
-                <BrowserRouter>
-                    <Header />
-                    <Switch>
-                        <Route path='/' exact component={Home} />
-                    </Switch>
-                </BrowserRouter>
-            </ThemeProvider>
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <BrowserRouter>
+                <Header />
+                <Switch>
+                    <Route path='/' exact component={Home} />
+                    <Route path='/blog' component={Blog} />
+                </Switch>
+                <Footer />
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
+
+

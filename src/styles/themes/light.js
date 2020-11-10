@@ -3,12 +3,12 @@ const light = {
     title: 'light',
 
     colors: {
-        text: '#030301',
-        featured: '#007EA7',
-        text_featured: '#030301',
+        text: '#000000',
+        featured: '#ffffff',
+        text_featured: '#32c5d2',
 
-        background: '#fffff3',
-        background_featured: '#47a8bd',
+        background: '#ffffff',
+        background_featured: '#5c6873',
     }
 }
 

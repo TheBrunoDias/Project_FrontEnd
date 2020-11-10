@@ -8,18 +8,17 @@ const Container = styled.div`
     width: 100vw;
 `;
 
-
 const HomeHeader = styled.header`
     width:100vw;
-    background: linear-gradient(-45deg, ${props => props.theme.colors.featured}, ${props => props.theme.colors.background}) no-repeat;
-    background-size: 300% 300%;
-    height: 50vh;
+    background: linear-gradient(-45deg, ${props => props.theme.colors.text_featured}, ${props => props.theme.colors.background},  ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.text_featured}) no-repeat;
+    background-size: 500% 500%;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    animation: ${HeaderBackground} 2s linear infinite alternate;
+    animation: ${HeaderBackground} 10s ease-in-out infinite;
 
     h1{
         position: relative;
@@ -60,40 +59,7 @@ const HomeContainer = styled.div`
     }
 `;
 
-const AsideArea = styled.aside`
-        color: ${props => props.theme.colors.text_featured};
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        right: 10vw;
-        width: 30vw;
-        border: 1px solid ${props => props.theme.colors.text_featured};
 
-        form{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 10px 0;
-            margin: 2vh 0;
-
-            input{
-                width: 80%;
-                height: 4vh;
-                padding: 10px;
-                font-style: italic;
-                border: 1px solid ${props => props.theme.colors.text_featured};
-                
-            }
-            button{
-                width: 18%;
-                border: 1px solid ${props => props.theme.colors.text_featured};
-            }
-        }
-
-
-`;
 
 const SectionTitle = styled.h3`
             width: 100%;
@@ -108,6 +74,5 @@ export {
     Container,
     HomeHeader,
     HomeContainer,
-    SectionTitle,
-    AsideArea
+    SectionTitle
 }
