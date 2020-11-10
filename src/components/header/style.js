@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,15 +17,6 @@ const SignContainer = styled.div`
     justify-content: space-around;
     align-items: center;
 
-`;
-
-const NavLink = styled(Link)`
-    color: ${props => props.theme.colors.text_featured};
-    transition: opacity 0.5s;
-
-    &:hover{
-        opacity: 0.55;
-    }
 `;
 
 const Divider = styled.div`
@@ -84,7 +74,6 @@ const ListItem = styled.li`
 export {
     Container,
     SignContainer,
-    NavLink,
     Divider,
     SocialContainer,
     LeftContainer,

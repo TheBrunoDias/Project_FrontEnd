@@ -1,14 +1,37 @@
-import { useContext} from 'react'
+//REACT HOOKS
+import { useContext, useEffect} from 'react'
+
+//REAT ROUTER DOM
+import {useLocation} from 'react-router-dom';
+
+//THEME DARK AND LIGHT CONTEXT FROM STYLED-COMPONENTS
 import { ThemeContext } from 'styled-components';
 
-
+//STYLEDS
 import { Container, LeftFooter, SocialContainer, RightFooter, BackToTopBottom } from './style';
 
+//ICONS
 import { FiFacebook, FiInstagram, FiGithub, FiArrowUp } from 'react-icons/fi';
+
+function BackToTop(){
+    window.scrollBy({
+        top: -document.body.scrollHeight,
+        behavior: "smooth",
+    });
+}
 
 
 export default function Footer() {
     const { colors } = useContext(ThemeContext);
+
+   //RETURN THE CURRENT URL
+   const {pathname} = useLocation();
+
+   //SCROLL TO THE TOP WHEN URL CHANGES
+   useEffect(() => {
+      BackToTop();
+   },[pathname]);
+
     return (
         <Container>
             <LeftFooter>
@@ -32,12 +55,7 @@ export default function Footer() {
                 </form>
             </RightFooter>
 
-            <BackToTopBottom onClick={() => {
-                 window.scrollBy({
-                    top: -window.innerHeight * 2,
-                    behavior: "smooth",
-                });
-            }}>
+            <BackToTopBottom onClick={() => {BackToTop()}}>
                 <FiArrowUp size={32} color={colors.background_featured}/>
             </BackToTopBottom>
         </Container>

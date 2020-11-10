@@ -6,7 +6,7 @@ const AsideArea = styled.aside`
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         right: 10vw;
         width: 30vw;
         border: 1px solid ${props => props.theme.colors.text_featured};
@@ -41,4 +41,37 @@ const SectionTitle = styled.h3`
             border: 1px solid ${props => props.theme.colors.text_featured};
 `;
 
-export { SectionTitle, AsideArea}
+const Categories = styled.ul`
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    li{
+        display: inline-block;
+        padding: 10px 0;
+        transition: 0.5s;
+        position: relative;
+        :hover{
+            transform:translate(5%, -5%);
+        }
+
+    }
+
+    li::before{
+        position: absolute;
+        transition: 0.5s;
+        content: '';
+        height: 1%;
+        width: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    li:hover::before{
+        background: ${props => props.theme.colors.text_featured};
+        width: 100%;
+        left: 0;
+    }
+`;
+export { SectionTitle, AsideArea,Categories}

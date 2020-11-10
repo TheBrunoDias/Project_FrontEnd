@@ -1,7 +1,6 @@
 //REACT HOOKS
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState} from 'react'
 
-import {useLocation} from 'react-router-dom';
 
 //LIBRIRIES
 import Switch from 'react-switch'
@@ -11,7 +10,7 @@ import { ThemeContext } from 'styled-components';
 import { useTheme } from '../../contexts/global';
 
 //STYLES 
-import { Container, NavLink, Divider, SocialContainer, LeftContainer, RightContainer, ListItem} from './style';
+import { Container, Divider, SocialContainer, LeftContainer, RightContainer, ListItem} from './style';
 
 //ICONS
 import { FiSun, FiFacebook, FiInstagram, FiGithub, FiPhone} from 'react-icons/fi';
@@ -23,7 +22,10 @@ import {CgGames} from 'react-icons/cg';
 //THEMES
 import dark from '../../styles/themes/dark';
 import light from '../../styles/themes/light';
+
+//COMPONENTS
 import DropDown from '../dropdown';
+import NavLink from '../link';
 
 
 export default function Header() {
@@ -36,21 +38,10 @@ export default function Header() {
     const { colors } = useContext(ThemeContext);
     const { theme, setTheme } = useTheme();
 
-    //RETURN THE CURRENT URL
-    const {pathname} = useLocation();
-
-    //SCROLL TO THE TOP WHEN URL CHANGES
-    useEffect(() => {
-        window.scrollBy({
-            top: -window.innerHeight * 2,
-            behavior: "smooth",
-        });
-    },[pathname])
-
     return (
         <Container>
             <LeftContainer>
-                <NavLink to="/"><h1>Uniamericon</h1></NavLink>
+                <NavLink path="/"><h1>Uniamericon</h1></NavLink>
                 <SocialContainer>
                     <a href="/" target="_blank"><FiFacebook size={20} color={colors.text_featured} /></a>
                     <a href="/" target="_blank"><FiInstagram size={20} color={colors.text_featured} /></a>
@@ -61,13 +52,13 @@ export default function Header() {
             <RightContainer>
 
                 <DropDown title="Saiba Mais">
-                        <ListItem><NavLink to="/"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
+                        <ListItem><NavLink path="/"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
                         <hr width="100%"/>
-                        <ListItem><NavLink to="/"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
+                        <ListItem><NavLink path="/"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
                         <hr width="100%"/>
-                        <ListItem><NavLink to="/"><CgGames/> Jogos</NavLink></ListItem>
+                        <ListItem><NavLink path="/"><CgGames/> Jogos</NavLink></ListItem>
                         <hr width="100%"/>
-                        <ListItem><NavLink to="/"><FiPhone/> Fale Conosco</NavLink></ListItem>
+                        <ListItem><NavLink path="/"><FiPhone/> Fale Conosco</NavLink></ListItem>
                 </DropDown>
 
                 <Switch
@@ -86,7 +77,7 @@ export default function Header() {
                     onColor={colors.background}
                 />
                 <Divider />
-               <NavLink to="/">Entrar</NavLink>
+               <NavLink path="/">Entrar</NavLink>
             </RightContainer>
 
         </Container>

@@ -4,10 +4,10 @@ const light = {
 
     colors: {
         text: '#000000',
-        featured: '#ffffff',
+        featured: '#EAEAEA',
         text_featured: '#32c5d2',
 
-        background: '#ffffff',
+        background: '#EAEAEA',
         background_featured: '#5c6873',
     }
 }

@@ -82,6 +82,7 @@ const BackToTopBottom = styled.button`
     background: ${props => props.theme.colors.text_featured};
     cursor: pointer;
     :hover{
+        opacity: 0.7;
         transform: rotate(360deg);
     }
 `;
