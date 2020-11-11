@@ -20,7 +20,6 @@ function BackToTop(){
     });
 }
 
-
 export default function Footer() {
     const { colors } = useContext(ThemeContext);
 

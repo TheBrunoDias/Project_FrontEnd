@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
+    position: fixed;
+    width: 100%;
     height: 60px;
     background:  ${props => props.theme.colors.background_featured};
     color:  ${props => props.theme.colors.text};
@@ -9,6 +11,7 @@ const Container = styled.div`
     align-items: center;
     padding: 0 5vw;
     text-transform:uppercase;
+    z-index: 10;
 `;
 
 const SignContainer = styled.div`

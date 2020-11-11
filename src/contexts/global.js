@@ -1,5 +1,6 @@
 import {createContext, useContext} from 'react';
-import light from '../styles/themes/light';
+// import light from '../styles/themes/light';
+import dark from '../styles/themes/dark';
 
 import usePersistedSate from './usePersistedState';
 
@@ -7,7 +8,7 @@ const ThemeContext = createContext();
 
 export default function GlobalContextProvider({children}){
 
-    const [theme,setTheme] = usePersistedSate('theme', light);
+    const [theme,setTheme] = usePersistedSate('theme', dark);
     return(
         <ThemeContext.Provider
             value={{

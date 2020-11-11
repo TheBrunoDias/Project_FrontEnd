@@ -9,8 +9,9 @@ import { ThemeProvider } from 'styled-components';
 import NavBar from './components/navbar';
 
 //PAGES
-import Home from './pages/home';
-import Blog from './pages/blog';
+import Landing from './pages/landing';
+import Blog from './pages/blog/blog';
+import BlogSingle from './pages/blog/single';
 import PageNotFound from './pages/notfound';
 
 //CONTEXT
@@ -27,8 +28,9 @@ export default function Routes() {
             <BrowserRouter>
                 <NavBar />
                 <Switch>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/blog' component={Blog} />
+                    <Route path='/' exact component={Landing} />
+                    <Route path='/blog' exact component={Blog} />
+                    <Route path='/blog/single' component={BlogSingle} />
                     <PageNotFound/>
                 </Switch>
                 <Footer />

@@ -2,7 +2,6 @@ import { Container } from './style';
 
 import ErrorImg from '../../assets/images/errorimg.png';
 
-import AsideBlog from '../../components/aside';
 import Header from '../../components/header';
 
 export default function PageNotFound() {

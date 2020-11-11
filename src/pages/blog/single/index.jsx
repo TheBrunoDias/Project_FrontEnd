@@ -1,14 +1,14 @@
 //IMAGES
-import ImgBlog from '../../assets/images/image.png';
+import ImgBlog from '../../../assets/images/image.png';
 
 //STYLES
 import { Container, BlogImg, Title, AuthorArea, SubTitle, TextContainer, BlogArea } from './style';
 
 //COMPONENTS
-import AsideBlog from '../../components/aside';
-import Header from "../../components/header";
+import AsideBlog from '../../../components/aside';
+import Header from "../../../components/header";
 
-export default function Blog() {
+export default function BlogSingle() {
     return (
         <>
             <Header title="Single Page Blog" subtitle="Is this a Lorem Ipsum?" />

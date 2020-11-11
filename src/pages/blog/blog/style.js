@@ -19,16 +19,24 @@ const HomeContainer = styled.div`
 
 
 const SectionTitle = styled.h3`
-            width: 100%;
-            color: ${props => props.theme.colors.text_featured};
-            background-color: ${props => props.theme.colors.background_featured};
-            padding: 10px;
+    width: 100%;
+    color: ${props => props.theme.colors.text_featured};
+    background-color: ${props => props.theme.colors.background_featured};
+    padding: 10px;
+`;
 
+const CardContainer = styled.div`
+    margin-top: 2vh;
+    padding: 0 2vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 
 export {
     Container,
     HomeContainer,
-    SectionTitle
+    SectionTitle,
+    CardContainer
 }

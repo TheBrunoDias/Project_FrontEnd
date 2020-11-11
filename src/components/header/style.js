@@ -14,7 +14,7 @@ const HomeHeader = styled.header`
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    animation: ${HeaderBackground} 10s ease-in-out infinite;
+    animation: ${HeaderBackground} 10s ease-in-out infinite alternate;
     border-bottom: 2px solid ${props => props.theme.colors.text};
 
     h1{
