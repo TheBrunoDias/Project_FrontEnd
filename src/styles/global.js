@@ -8,13 +8,13 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         outline-color: ${props => props.theme.colors.featured};
+        font-family: 'Raleway', sans-serif;
     }
 
     body{
-        background: linear-gradient(45deg,${props => props.theme.colors.featured},${props => props.theme.colors.background}, ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.featured});
+        background:${props => props.theme.colors.background};
         background-size: 500% 500%;
         color: ${props => props.theme.colors.text};
-        font-family: 'Roboto Condensed', sans-serif;
         height: 100vh;
         overflow-x: hidden;
         transition: color  0.5s, background 0.5s;

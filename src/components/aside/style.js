@@ -9,7 +9,6 @@ const AsideArea = styled.aside`
         align-items: flex-start;
         right: 10vw;
         width: 30vw;
-        border: 1px solid ${props => props.theme.colors.text_featured};
 
         form{
             display: flex;

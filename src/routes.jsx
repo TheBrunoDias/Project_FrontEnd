@@ -6,7 +6,7 @@ import GlobalStyles from './styles/global';
 import { ThemeProvider } from 'styled-components';
 
 //COMPONENTS
-import Header from './components/header';
+import NavBar from './components/navbar';
 
 //PAGES
 import Home from './pages/home';
@@ -24,7 +24,7 @@ export default function Routes() {
         <ThemeProvider theme={theme}>
             <GlobalStyles />
             <BrowserRouter>
-                <Header />
+                <NavBar />
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/blog' component={Blog} />

@@ -7,52 +7,51 @@ const Container = styled.div`
     height: 50vh;
     transition: 0.55s;
     overflow: hidden;
+    border: 1px solid ${props => props.theme.colors.text_featured};
 
     &:hover{
         transform: scale(1.01,1.01);
     }
 `;
 
-const Image = styled.img`
-    width: 100%;
-
-`;
-
 const Title = styled.h2`
     padding: 0 20px;
-    top: 80%;
     position: absolute;
+    bottom: 20%;
     color: white;
+    z-index:10;
 `;
 
 const Description = styled.p`
     padding: 0 20px;
-    top: 90%;
     position: absolute;
+    bottom: 10%;
     color: white;
+    z-index:10;
 `;
 
 const Author = styled.h3`
     padding: 0 20px;
-    top: 80%;
     right: 0;
     position: absolute;
+    bottom: 20%;
     color: white;
+    z-index:10;
 `;
 
 const Date = styled.p`
     padding: 0 20px;
-    top: 90%;
     right: 0;
     position: absolute;
+    bottom: 10%;
     color: white;
+    z-index:10;
 `;
 
 
 
 export {
     Container,
-    Image,
     Title,
     Description,
     Author,

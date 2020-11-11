@@ -1,10 +1,8 @@
-import { Container, Image, Title, Description, Author, Date } from './style';
+import { Container, Title, Description, Author, Date } from './style';
 
 export default function Post({ img, title, description, author, date }) {
     return (
-        <Container>
-            <Image src={img} alt="" />
-
+        <Container style={{backgroundImage: `url(${img})`, backgroundSize:'cover'}}>
             <Title>{title} </Title>
             <Description>{description}</Description>
             <Author>{author}</Author>

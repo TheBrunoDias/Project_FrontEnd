@@ -1,12 +1,12 @@
 //STYLED-COMPONENTS 
-import { Container, HomeHeader, HomeContainer,SectionTitle} from "./style";
+import { Container, HomeContainer,SectionTitle} from "./style";
 
 //COMPONENTS
 import AsideBlog from "../../components/aside";
-
-//ICONS
-import {FiSmile} from 'react-icons/fi';
 import Post from "../../components/post";
+import Header from "../../components/header";
+
+
 
 //IMAGES
 import imgBlog from '../../assets/images/image.png';
@@ -15,10 +15,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <Container>
-            <HomeHeader>
-                <h1>Bem vindo </h1>
-                <p>Obrigado por fazer parte dessa historia <FiSmile /></p>
-            </HomeHeader>
+            <Header title="Bem Vindo" subtitle="Você está na Página Principal"/>
 
             <HomeContainer>
                 <section>

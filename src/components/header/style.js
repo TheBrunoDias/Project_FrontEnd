@@ -1,83 +1,44 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
-    border-bottom: 2px solid ${props => props.theme.colors.text};
-    height: 60px;
-    background:  ${props => props.theme.colors.background_featured};
-    color:  ${props => props.theme.colors.text};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-    text-transform:uppercase;
-`;
+//ANIMATIONS
+import HeaderBackground from '../../styles/keyframes/HeaderBackground';
+import {TitleAfterAnimation, TitleAnimation, SubTitleAnimation} from '../../styles/keyframes/HeaderTitle';
 
-const SignContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-`;
-
-const Divider = styled.div`
-    width:2px;
-    border-radius: 40px;
-    height: 30px;
-    background-color: ${props => props.theme.colors.background}; 
-    margin: 20px;
-`;
-
-const SocialContainer = styled.div`
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-
-    a{
-        transition: 0.5s;
-        padding: 10px;
-        
-    }
-
-    a:hover{
-        background-color: ${props => props.theme.colors.featured};
-        border-radius: 50px;
-    }
-`;
-
-const RightContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-`;
-
-const LeftContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-`;
-
-const DropDown = styled.div`
-    position: absolute;
-    margin-top: 160px;
+const HomeHeader = styled.header`
+    width:100vw;
+    background: linear-gradient(-45deg, ${props => props.theme.colors.text_featured}, ${props => props.theme.colors.background},  ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.text_featured}) no-repeat;
+    background-size: 500% 500%;
+    height: 25vh;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    animation: ${HeaderBackground} 10s ease-in-out infinite;
+    border-bottom: 2px solid ${props => props.theme.colors.text};
+
+    h1{
+        position: relative;
+        font-size: 5vw;
+        
+        color: transparent;
+        margin-bottom: 2vh;
+        overflow: hidden;
+        animation: ${TitleAnimation} 0.5s linear  2s forwards;
+    }
+    h1::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(-45deg, ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.background}) no-repeat;
+            animation: ${TitleAfterAnimation} 2s ease-in-out 1 1s;
+    }
+
+    p{
+        font-size: 20px;
+        animation: ${SubTitleAnimation} 2s cubic-bezier(0.4,-0.98, 0.04, 1.56) forwards;
+    }
 `;
 
-const ListItem = styled.li`
-    list-style: none;
-    margin: 10px 5px;
-`;
-
-export {
-    Container,
-    SignContainer,
-    Divider,
-    SocialContainer,
-    LeftContainer,
-    RightContainer,
-    DropDown,
-    ListItem
-}
+export default HomeHeader;
