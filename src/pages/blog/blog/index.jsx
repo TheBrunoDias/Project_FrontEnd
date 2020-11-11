@@ -32,7 +32,7 @@ export default function Blog() {
             <HomeContainer>
                 <section>
                     <SectionTitle> Postagens Mais recentes: </SectionTitle>
-                    <Link to="/blog">
+                    <Link to="/blog/single">
                         <Post
                             img={imgBlog}
                             title="Blog Title"
