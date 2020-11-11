@@ -11,6 +11,7 @@ import NavBar from './components/navbar';
 //PAGES
 import Home from './pages/home';
 import Blog from './pages/blog';
+import PageNotFound from './pages/notfound';
 
 //CONTEXT
 import { useTheme } from './contexts/global'
@@ -28,6 +29,7 @@ export default function Routes() {
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/blog' component={Blog} />
+                    <PageNotFound/>
                 </Switch>
                 <Footer />
             </BrowserRouter>

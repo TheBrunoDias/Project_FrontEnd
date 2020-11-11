@@ -32,6 +32,7 @@ const ChildrenContainer = styled.div`
     background-color: ${props => props.theme.colors.background_featured};
     border-radius: 5px;
     animation: ${DropDownContainer} 0.5s normal;
+    z-index: 1000;
 `;
 
 export {
