@@ -12,7 +12,7 @@ export default function DropDown({ title, children }) {
             <OpenModal onClick={() => setOpenDropDown(!openDropDown)}> {title} </OpenModal>
             {
                 openDropDown ?
-                    <ChildrenContainer>
+                    <ChildrenContainer onMouseLeave={() => setOpenDropDown(false)}>
                         {children}
                     </ChildrenContainer>
                     : 

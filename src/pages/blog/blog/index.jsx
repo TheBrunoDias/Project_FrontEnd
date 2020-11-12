@@ -1,6 +1,7 @@
 //STYLED-COMPONENTS 
 import { Container, HomeContainer, SectionTitle,CardContainer } from "./style";
 
+//REACT ROUTER DOM LINKS
 import { Link } from "react-router-dom";
 
 //COMPONENTS

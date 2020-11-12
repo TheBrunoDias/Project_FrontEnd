@@ -6,9 +6,9 @@ import {TitleAfterAnimation, TitleAnimation, SubTitleAnimation} from '../../styl
 
 const HomeHeader = styled.header`
     width:100vw;
+    padding: 80px 0;
     background: linear-gradient(-45deg, ${props => props.theme.colors.text_featured}, ${props => props.theme.colors.background},  ${props => props.theme.colors.background_featured}, ${props => props.theme.colors.text_featured}) no-repeat;
     background-size: 500% 500%;
-    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
