@@ -1,10 +1,10 @@
-import React from 'react';
 
-// COMPONENTS
+//COMPONENTS
 import Routes from './routes';
 
-// GLOBAL CONTEXT FROM REACT CONTEXT API
+//GLOBAL CONTEXT FROM REACT CONTEXT API
 import GlobalContextProvider from './contexts/global';
+
 
 function App() {
   return (

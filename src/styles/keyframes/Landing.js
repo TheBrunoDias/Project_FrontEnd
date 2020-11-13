@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import {keyframes} from 'styled-components';
 
 const Title = keyframes`
     from{
@@ -27,9 +27,14 @@ const HeaderButtonHover = keyframes`
     }
     to{
         transform: scale(1.2,1.5);
-
+        
         opacity: 0;
     }
 `;
 
-export { Title, SubTitle, HeaderButtonHover };
+
+export {
+    Title,
+    SubTitle,
+    HeaderButtonHover
+}
