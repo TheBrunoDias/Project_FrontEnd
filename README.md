@@ -9,6 +9,7 @@
  - [ ] Entre em contato*
  - [ ] Jogos*
  - [ ] User Page
+    - [ ] Tela de Login
     - [ ] Tela de Nova Postagem
     - [ ] Tela de Atualização de dados do usuário
  - [ ] Blog

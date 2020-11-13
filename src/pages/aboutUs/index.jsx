@@ -1,8 +1,8 @@
+//REACT ROUTER DOM
+import {useLocation} from 'react-router-dom';
+
 //SLIDER FROM REAT-SLICK
 import Slider from 'react-slick';
-
-
-import {useLocation} from 'react-router-dom';
 
 //ICONS
 import {AiTwotoneMail} from 'react-icons/ai';
@@ -137,12 +137,12 @@ export default function AboutUs() {
         dots: true,
         autoplay: true,
         infinite: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         speed: 1000,
         ease: 'ease-in-out',
         arrows: false,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
     };
 
     return (

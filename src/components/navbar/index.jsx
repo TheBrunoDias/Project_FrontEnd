@@ -77,7 +77,7 @@ export default function NavBar() {
                     onColor={colors.background}
                 />
                 <Divider />
-               <NavLink path="/">Entrar</NavLink>
+               <NavLink path="/login">Entrar</NavLink>
             </RightContainer>
 
         </Container>
