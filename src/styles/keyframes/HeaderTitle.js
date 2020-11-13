@@ -1,4 +1,4 @@
-import {keyframes} from 'styled-components';
+import { keyframes } from 'styled-components';
 
 const TitleAfterAnimation = keyframes`
     from{
@@ -30,8 +30,4 @@ const SubTitleAnimation = keyframes`
     }}
 `;
 
-export {
-    TitleAfterAnimation,
-    TitleAnimation,
-    SubTitleAnimation
-}
+export { TitleAfterAnimation, TitleAnimation, SubTitleAnimation };

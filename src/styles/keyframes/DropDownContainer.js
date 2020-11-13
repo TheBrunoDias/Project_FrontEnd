@@ -1,8 +1,8 @@
-import {keyframes} from 'styled-components';
+import { keyframes } from 'styled-components';
 
 const DropDownContainer = keyframes`
     from{
-        
+
         transform: scale(0, 1);
     }
 
