@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 //ANIMATIONS KEYFRAMES
 import HeaderBackground from '../../styles/keyframes/HeaderBackground';
-import { Title, SubTitle, HeaderButtonHover } from '../../styles/keyframes/Landing';
+import {SubTitle, HeaderButtonHover } from '../../styles/keyframes/Landing';
 
 const Container = styled.div`
     width: 100vw;

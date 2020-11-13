@@ -5,7 +5,7 @@ import parallax1 from '../../assets/images/parallax1.png';
 import parallax2 from '../../assets/images/parallax2.jpg';
 import parallax4 from '../../assets/images/parallax4.jpg';
 
-export default function AbouteTea() {
+export default function AboutTea() {
     return (
         <>
             <CoverLeft>

@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components';
 
 //COMPONENTS
 import NavBar from './components/navbar';
+import Footer from './components/footer';
 
 //PAGES
 import Landing from './pages/landing';
@@ -16,7 +17,6 @@ import PageNotFound from './pages/notfound';
 
 //CONTEXT
 import { useTheme } from './contexts/global'
-import Footer from './components/footer';
 
 export default function Routes() {
 

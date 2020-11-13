@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Container} from './style';
 
-import AbouteTea from '../aboutTea';
+import AboutTea from '../aboutTea';
+import AboutUs from '../aboutUs';
 
 export default function Landing() {
     return (
@@ -16,8 +17,9 @@ export default function Landing() {
                 </Link>
             </header>
 
-            <AbouteTea/>
+            <AboutTea/>
             
+            <AboutUs/>
 
         </Container>
     );
