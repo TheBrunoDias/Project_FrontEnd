@@ -19,7 +19,7 @@ const Divider = styled.div`
     width: 60px;
     height: 5px;
     margin: 4vh auto;
-    background-color: ${props => props.theme.colors.text_featured}
+    background-color: ${props => props.theme.colors.text_featured};
 `;
 
 const Slide = styled.div`  
@@ -52,7 +52,9 @@ const Slide = styled.div`
     }
 `;
 
-const Email = styled.p`
+const Email = styled.p` 
+    display: flex;
+    align-items: center;
     padding: 3% 0;
 `;
 

@@ -52,9 +52,9 @@ export default function NavBar() {
             <RightContainer>
 
                 <DropDown title="Saiba Mais">
-                        <ListItem><NavLink path="/"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
+                        <ListItem><NavLink path="/about-us"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
                         <hr width="100%"/>
-                        <ListItem><NavLink path="/"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
+                        <ListItem><NavLink path="/about-tea"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
                         <hr width="100%"/>
                         <ListItem><NavLink path="/"><CgGames/> Jogos</NavLink></ListItem>
                         <hr width="100%"/>

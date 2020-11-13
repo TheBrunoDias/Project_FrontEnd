@@ -1,13 +1,25 @@
 
+import { useLocation } from 'react-router-dom';
+
+//STYLES FROM 'STYLED CROMPONENTS
 import { ParallaxLeft, CoverLeft, ParallaxRight, CoverRight, FullParallax, CoverCenter } from './style';
 
+import Header from '../../components/header';
+
+//PARALLAX IMAGES
 import parallax1 from '../../assets/images/parallax1.png';
 import parallax2 from '../../assets/images/parallax2.jpg';
 import parallax4 from '../../assets/images/parallax4.jpg';
 
 export default function AboutTea() {
+
+    const {pathname} = useLocation();
     return (
         <>
+            {
+                pathname !== '/about-tea' ? null : <Header title="Transtorno do Espectro Autista" subtitle="Conheça o nosso projeto" />
+            }
+
             <CoverLeft>
                 <h2>Transtorno do Espectro Autista (TEA) </h2>
                 <div></div>
