@@ -16,7 +16,6 @@ import BlogSingle from './pages/blog/single';
 import PageNotFound from './pages/notfound';
 import AboutUs from './pages/aboutUs';
 import AboutTea from './pages/aboutTea';
-import Login from './pages/login';
 
 //CONTEXT
 import { useTheme } from './contexts/global'
@@ -34,7 +33,6 @@ export default function Routes() {
                     <Route path='/' exact component={Landing} />
                     <Route path='/blog' exact component={Blog} />
                     <Route path='/blog/single' component={BlogSingle} />
-                    <Route path='/login' component={Login} />
                     <Route path='/about-us' component={AboutUs} />
                     <Route path='/about-tea' component={AboutTea} />
                     <PageNotFound/>

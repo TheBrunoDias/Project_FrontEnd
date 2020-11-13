@@ -5,16 +5,19 @@ import { Container, OpenModal, ChildrenContainer } from './style';
 
 export default function DropDown({ title, children }) {
 
-    const [openDropDown, setOpenDropDown] = useState('none');
+    const [openDropDown, setOpenDropDown] = useState(false);
 
     return (
         <Container>
-            <OpenModal onClick={() => setOpenDropDown(openDropDown === 'none' ? 'flex' : 'none')}> {title} </OpenModal>
-
-            <ChildrenContainer style={{ display: `${openDropDown}` }}>
-                {children}
-            </ChildrenContainer>
-
+            <OpenModal onClick={() => setOpenDropDown(!openDropDown)}> {title} </OpenModal>
+            {
+                openDropDown ?
+                    <ChildrenContainer onMouseLeave={() => setOpenDropDown(false)}>
+                        {children}
+                    </ChildrenContainer>
+                    : 
+                    null
+            }
 
         </Container>
     );
