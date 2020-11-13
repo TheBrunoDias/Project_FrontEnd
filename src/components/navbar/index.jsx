@@ -1,5 +1,5 @@
 //REACT HOOKS
-import { useContext, useState} from 'react'
+import { useContext, useState } from 'react'
 
 
 //LIBRIRIES
@@ -10,14 +10,14 @@ import { ThemeContext } from 'styled-components';
 import { useTheme } from '../../contexts/global';
 
 //STYLES 
-import { Container, Divider, SocialContainer, LeftContainer, RightContainer, ListItem} from './style';
+import { Container, Divider, SocialContainer, LeftContainer, RightContainer, ListItem } from './style';
 
 //ICONS
-import { FiSun, FiFacebook, FiInstagram, FiGithub, FiPhone} from 'react-icons/fi';
+import { FiSun, FiFacebook, FiInstagram, FiGithub, FiPhone } from 'react-icons/fi';
 import { BsMoon } from 'react-icons/bs';
-import {RiTeamLine} from 'react-icons/ri';
-import {HiOutlinePuzzle} from 'react-icons/hi';
-import {CgGames} from 'react-icons/cg';
+import { RiTeamLine } from 'react-icons/ri';
+import { HiOutlinePuzzle } from 'react-icons/hi';
+import { CgGames } from 'react-icons/cg';
 
 //THEMES
 import dark from '../../styles/themes/dark';
@@ -52,13 +52,13 @@ export default function NavBar() {
             <RightContainer>
 
                 <DropDown title="Saiba Mais">
-                        <ListItem><NavLink path="/about-us"> <RiTeamLine/> Sobre Nós</NavLink></ListItem>
-                        <hr width="100%"/>
-                        <ListItem><NavLink path="/about-tea"><HiOutlinePuzzle/> Sobre o TEA</NavLink></ListItem>
-                        <hr width="100%"/>
-                        <ListItem><NavLink path="/"><CgGames/> Jogos</NavLink></ListItem>
-                        <hr width="100%"/>
-                        <ListItem><NavLink path="/"><FiPhone/> Fale Conosco</NavLink></ListItem>
+                    <ListItem><NavLink path="/about-us"> <RiTeamLine /> Sobre Nós</NavLink></ListItem>
+                    <hr width="100%" />
+                    <ListItem><NavLink path="/about-tea"><HiOutlinePuzzle /> Sobre o TEA</NavLink></ListItem>
+                    <hr width="100%" />
+                    <ListItem><NavLink path="/"><CgGames /> Jogos</NavLink></ListItem>
+                    <hr width="100%" />
+                    <ListItem><NavLink path="/"><FiPhone /> Fale Conosco</NavLink></ListItem>
                 </DropDown>
 
                 <Switch
@@ -77,7 +77,7 @@ export default function NavBar() {
                     onColor={colors.background}
                 />
                 <Divider />
-               <NavLink path="/">Entrar</NavLink>
+                <NavLink path="/login">Entrar</NavLink>
             </RightContainer>
 
         </Container>
