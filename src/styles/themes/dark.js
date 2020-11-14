@@ -1,15 +1,13 @@
-
 const dark = {
-    title: 'dark',
-    colors: {
-        text: '#fffffc',
-        featured: '#000000',
-        text_featured: '#32c5d2',
+  title: "dark",
+  colors: {
+    primary: "#ffffff",
+    secondary: "#8894FF",
 
-        background: '#000000',
-        background_featured: '#363636',
-
-    }
-}
+    background_primary: "#000000",
+    background_secondary: "#373737",
+    background_third: "#898989",
+  },
+};
 
 export default dark;

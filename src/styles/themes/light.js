@@ -1,15 +1,14 @@
-
 const light = {
-    title: 'light',
+  title: "light",
 
-    colors: {
-        text: '#000000',
-        featured: '#EAEAEA',
-        text_featured: '#000000',
+  colors: {
+    primary: "#000000",
+    secondary: "#05238B",
 
-        background: '#EAEAEA',
-        background_featured: '#32c5d2',
-    }
-}
+    background_primary: "#DBDBDB",
+    background_secondary: "#ffffff",
+    background_third: "#757575",
+  },
+};
 
 export default light;

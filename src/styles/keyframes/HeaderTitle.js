@@ -1,37 +1,29 @@
-import {keyframes} from 'styled-components';
+import { keyframes } from "styled-components";
 
 const TitleAfterAnimation = keyframes`
-    from{
-        transform: translateX(-201%);
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+
     }
-    to{
+    50%{
         transform: translateX(0%);
     }
-`;
+    100%{
+        opacity: 1;
+    }
 
-const TitleAnimation = keyframes`
-    from{
-        color: transparent;
-    }
-    to{
-        color: white;
-        text-shadow: 2px 2px 2px black;
-    }
 `;
 
 const SubTitleAnimation = keyframes`
     from{
         opacity: 0;
-        transform: translateY(-500%);
+        transform: translateX(-100%);
     }
     to{
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }}
 `;
 
-export {
-    TitleAfterAnimation,
-    TitleAnimation,
-    SubTitleAnimation
-}
+export { TitleAfterAnimation, SubTitleAnimation };

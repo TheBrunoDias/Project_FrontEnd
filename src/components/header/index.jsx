@@ -1,10 +1,13 @@
-import HomeHeader from './style';
+import { HomeHeader, Container } from './style';
 
 export default function Header({ title, subtitle }) {
     return (
         <HomeHeader>
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
+            <Container>
+                <h1>{title}</h1>
+                <div></div>
+                <p>{subtitle}</p>
+            </Container>
         </HomeHeader>
     );
 }

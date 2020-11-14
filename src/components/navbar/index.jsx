@@ -33,53 +33,53 @@ export default function NavBar() {
     //HOOKS
     const [check, setCheck] = useState(false);
 
-
     //CONTEXTS
     const { colors } = useContext(ThemeContext);
     const { theme, setTheme } = useTheme();
 
     return (
         <Container>
-            <LeftContainer>
-                <NavLink path="/"><h1>Uniamericon</h1></NavLink>
-                <SocialContainer>
-                    <a href="/" target="_blank"><FiFacebook size={20} color={colors.text_featured} /></a>
-                    <a href="/" target="_blank"><FiInstagram size={20} color={colors.text_featured} /></a>
-                    <a href="/" target="_blank"> <FiGithub size={20} color={colors.text_featured} /></a>
-                </SocialContainer>
-            </LeftContainer>
+            <nav>
+                <LeftContainer>
+                    <NavLink path="/"><h1>Uniamericon</h1></NavLink>
+                    <SocialContainer>
+                        <a href="/" target="_blank"><FiFacebook size={20} color={colors.text_featured} /></a>
+                        <a href="/" target="_blank"><FiInstagram size={20} color={colors.text_featured} /></a>
+                        <a href="/" target="_blank"> <FiGithub size={20} color={colors.text_featured} /></a>
+                    </SocialContainer>
+                </LeftContainer>
 
-            <RightContainer>
+                <RightContainer>
 
-                <DropDown title="Saiba Mais">
-                    <ListItem><NavLink path="/about-us"> <RiTeamLine /> Sobre Nós</NavLink></ListItem>
-                    <hr width="100%" />
-                    <ListItem><NavLink path="/about-tea"><HiOutlinePuzzle /> Sobre o TEA</NavLink></ListItem>
-                    <hr width="100%" />
-                    <ListItem><NavLink path="/"><CgGames /> Jogos</NavLink></ListItem>
-                    <hr width="100%" />
-                    <ListItem><NavLink path="/"><FiPhone /> Fale Conosco</NavLink></ListItem>
-                </DropDown>
+                    <DropDown title="Saiba Mais">
+                        <ListItem><NavLink path="/about-us"> <RiTeamLine /> Sobre Nós</NavLink></ListItem>
+                        <hr width="100%" />
+                        <ListItem><NavLink path="/about-tea"><HiOutlinePuzzle /> Sobre o TEA</NavLink></ListItem>
+                        <hr width="100%" />
+                        <ListItem><NavLink path="/"><CgGames /> Jogos</NavLink></ListItem>
+                        <hr width="100%" />
+                        <ListItem><NavLink path="/"><FiPhone /> Fale Conosco</NavLink></ListItem>
+                    </DropDown>
 
-                <Switch
-                    onChange={() => {
-                        setTheme(theme.title === 'light' ? dark : light);
-                        setCheck(!check);
-                    }}
-                    checked={check}
-                    checkedIcon={<FiSun color={colors.text} size={20} style={{ height: 30, marginLeft: 5 }} />}
-                    uncheckedIcon={<BsMoon color={colors.text} size={20} style={{ height: 30, marginLeft: 5 }} />}
-                    height={30}
-                    width={60}
-                    onHandleColor={colors.text}
-                    offHandleColor={colors.text}
-                    offColor={colors.background}
-                    onColor={colors.background}
-                />
-                <Divider />
-                <NavLink path="/login">Entrar</NavLink>
-            </RightContainer>
-
+                    <Switch
+                        onChange={() => {
+                            setTheme(theme.title === 'light' ? dark : light);
+                            setCheck(!check);
+                        }}
+                        checked={check}
+                        checkedIcon={<FiSun color={colors.secondary} size={20} style={{ height: 30, marginLeft: 5 }} />}
+                        uncheckedIcon={<BsMoon color={colors.secondary} size={20} style={{ height: 30, marginLeft: 5 }} />}
+                        height={30}
+                        width={60}
+                        onHandleColor={colors.primary}
+                        offHandleColor={colors.primary}
+                        offColor={colors.background_primary}
+                        onColor={colors.background_primary}
+                    />
+                    <Divider />
+                    <NavLink path="/login">Entrar</NavLink>
+                </RightContainer>
+            </nav>
         </Container>
     );
 }
