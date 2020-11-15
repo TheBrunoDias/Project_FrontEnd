@@ -1,5 +1,5 @@
 //REACT HOOKS
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 //REAT ROUTER DOM
 import { useLocation } from 'react-router-dom';
@@ -23,6 +23,8 @@ function BackToTop() {
 export default function Footer() {
     const { colors } = useContext(ThemeContext);
 
+    const [showButton, setShowButton] = useState(false);
+
     //RETURN THE CURRENT URL
     const { pathname } = useLocation();
 
@@ -30,6 +32,10 @@ export default function Footer() {
     useEffect(() => {
         BackToTop();
     }, [pathname]);
+
+    window.addEventListener('scroll', () => {
+        setShowButton((window.scrollY > window.innerHeight / 2) ? true : false);
+    })
 
     return (
         <Container>
@@ -53,9 +59,14 @@ export default function Footer() {
                 </form>
             </RightFooter>
 
-            <BackToTopBottom onClick={() => { BackToTop() }}>
-                <FiArrowUp size={32} color={colors.background_featured} />
-            </BackToTopBottom>
+            {
+                showButton ?
+                    <BackToTopBottom onClick={() => { BackToTop() }}>
+                        <FiArrowUp size={32} color={colors.background_featured} />
+                    </BackToTopBottom>
+                    : null
+            }
+
         </Container>
     );
 }

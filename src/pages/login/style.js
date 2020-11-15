@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 75vw;
-  height: 100vh;
   margin: auto;
+  margin-bottom: 50px;
 `;
 
 const FormContainer = styled.div`
@@ -13,12 +13,16 @@ const FormContainer = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 
   input,
   button {
     padding: 2% 1%;
     margin: 1% 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
   }
 `;
 

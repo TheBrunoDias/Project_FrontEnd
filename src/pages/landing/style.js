@@ -28,7 +28,7 @@ const Container = styled.div`
     div {
       text-transform: uppercase;
       padding: 3%;
-
+      text-shadow: 2px 2px 5px black;
       h1 {
         font-size: 60px;
         opacity: 0;
