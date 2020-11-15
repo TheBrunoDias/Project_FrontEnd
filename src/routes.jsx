@@ -17,6 +17,7 @@ import PageNotFound from './pages/notfound';
 import AboutUs from './pages/aboutUs';
 import AboutTea from './pages/aboutTea';
 import Login from './pages/login';
+import userPage from './pages/user/main';
 
 //CONTEXT
 import { useTheme } from './contexts/global'
@@ -37,6 +38,7 @@ export default function Routes() {
                     <Route path='/about-us' component={AboutUs} />
                     <Route path='/about-tea' component={AboutTea} />
                     <Route path='/login' component={Login} />
+                    <Route path='/user' exact component={userPage} />
                     <PageNotFound />
                 </Switch>
                 <Footer />

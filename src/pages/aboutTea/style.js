@@ -46,6 +46,10 @@ const CoverLeft = styled.div`
     background: ${(props) => props.theme.colors.secondary};
     margin: 20px 0;
   }
+
+  p {
+    color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 const ParallaxRight = styled.div`
@@ -81,6 +85,9 @@ const CoverRight = styled.div`
     height: 1%;
     background: ${(props) => props.theme.colors.secondary};
     margin: 20px 0;
+  }
+  p {
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 
