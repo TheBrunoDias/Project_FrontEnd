@@ -12,8 +12,8 @@
 - [ ] Entre em contato\*
 - [ ] Jogos\*
 - [x] User Page - Bruno
-  - [ ] Tela de Nova Postagem
-  - [ ] Tela de Atualização de dados do usuário
+  - [x] Tela de Nova Postagem
+  - [x] Tela de Atualização de dados do usuário
 - [ ] Blog
   - [x] Single Post Blog - Bruno
   - [ ] Search Post Page

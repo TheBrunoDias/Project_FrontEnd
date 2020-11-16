@@ -63,6 +63,12 @@ const UserPost = styled.div`
   }
 `;
 
+const NewPostArea = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export {
   Container,
   UserContainer,
@@ -71,4 +77,5 @@ export {
   UserPost,
   Input,
   PostsContainer,
+  NewPostArea,
 };

@@ -7,9 +7,10 @@ import {
   UserPost,
   PostsContainer,
   Input,
+  NewPostArea
 } from "./style";
 
-import { FiSettings, FiMail, FiPhone } from "react-icons/fi";
+import { FiSettings, FiMail, FiSmartphone, FiUser, FiBriefcase } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Img =
@@ -25,48 +26,29 @@ export default function userPage() {
         <UserInformations>
           <div>
             <h3>Bruno Sousa Dias</h3>
-            <Link to="/user">
+            <Link to="/user/update">
               <FiSettings />
             </Link>
           </div>
-          <p>Informações: </p>
+          <strong><FiUser /> Informações: </strong>
           <p>
             <FiMail /> : teste@teste.com
           </p>
           <p>
-            <FiPhone /> : (45) 9999999
+            <FiSmartphone /> : (45) 9999999
+          </p>
+          <p>
+            <FiBriefcase /> : Estudante
           </p>
         </UserInformations>
       </UserContainer>
       <Divider></Divider>
-      <h1>Suas postagens</h1>
+      <NewPostArea>
+        <h1>Suas postagens</h1>
+        <Link to="/user/create">Nova Postagem</Link>
+      </NewPostArea>
       <Input type="text" placeholder="procurar postagem" />
       <PostsContainer>
-        <UserPost>
-          <img src={Img} alt="postagem" />
-          <h4>Titulo da postagem</h4>
-          <p>Data da postagem</p>
-        </UserPost>
-        <UserPost>
-          <img src={Img} alt="postagem" />
-          <h4>Titulo da postagem</h4>
-          <p>Data da postagem</p>
-        </UserPost>
-        <UserPost>
-          <img src={Img} alt="postagem" />
-          <h4>Titulo da postagem</h4>
-          <p>Data da postagem</p>
-        </UserPost>
-        <UserPost>
-          <img src={Img} alt="postagem" />
-          <h4>Titulo da postagem</h4>
-          <p>Data da postagem</p>
-        </UserPost>
-        <UserPost>
-          <img src={Img} alt="postagem" />
-          <h4>Titulo da postagem</h4>
-          <p>Data da postagem</p>
-        </UserPost>
         <UserPost>
           <img src={Img} alt="postagem" />
           <h4>Titulo da postagem</h4>

@@ -18,6 +18,8 @@ import AboutUs from './pages/aboutUs';
 import AboutTea from './pages/aboutTea';
 import Login from './pages/login';
 import userPage from './pages/user/main';
+import UpdateUser from './pages/user/update';
+import NewPost from './pages/user/newpost';
 
 //CONTEXT
 import { useTheme } from './contexts/global'
@@ -39,6 +41,8 @@ export default function Routes() {
                     <Route path='/about-tea' component={AboutTea} />
                     <Route path='/login' component={Login} />
                     <Route path='/user' exact component={userPage} />
+                    <Route path='/user/update' component={UpdateUser} />
+                    <Route path='/user/create' component={NewPost} />
                     <PageNotFound />
                 </Switch>
                 <Footer />
